@@ -2,8 +2,10 @@ from flask import Flask, jsonify
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Flask routes
 @app.route('/')
